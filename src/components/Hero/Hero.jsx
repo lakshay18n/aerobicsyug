@@ -1,7 +1,35 @@
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [isMuted, setIsMuted] = useState(true);
+    const videoRef = useRef(null);
+
+    const handlePlay = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+            setIsPlaying(true);
+        }
+    };
+
+    const handleVideoClick = () => {
+        if (!videoRef.current) return;
+        if (isPlaying) {
+            videoRef.current.pause();
+            setIsPlaying(false);
+        } else {
+            videoRef.current.play();
+            setIsPlaying(true);
+        }
+    };
+
+    const toggleMute = (e) => {
+        e.stopPropagation();
+        setIsMuted(!isMuted);
+    };
+
     return (
         <header id="home" className="hero-section section">
             <div className="container hero-container">
@@ -20,9 +48,28 @@ const Hero = () => {
 
                 <div className="hero-visual">
                     <div className="glass-card vsl-card">
-                        <div className="video-placeholder">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aerobics Class" className="video-thumbnail" />
-                            <button className="play-btn"><i className="fas fa-play"></i></button>
+                        <div className="video-placeholder" onClick={handleVideoClick} style={{ cursor: 'pointer' }}>
+                            <video 
+                                ref={videoRef}
+                                className="video-thumbnail"
+                                src="https://res.cloudinary.com/da7ewmcje/video/upload/v1773836287/aerobics_video_final_rkh6au.mp4"
+                                muted={isMuted}
+                                playsInline
+                                preload="metadata"
+                                controls={false}
+                            />
+                            {!isPlaying && (
+                                <button className="play-btn" onClick={(e) => { e.stopPropagation(); handlePlay(); }}>
+                                    <i className="fas fa-play"></i>
+                                </button>
+                            )}
+                            <button 
+                                className="mute-btn" 
+                                onClick={toggleMute}
+                                aria-label={isMuted ? "Unmute video" : "Mute video"}
+                            >
+                                <i className={`fas ${isMuted ? 'fa-volume-mute' : 'fa-volume-up'}`}></i>
+                            </button>
                         </div>
                     </div>
                     <div className="trainer-badge glass-card float-anim">
