@@ -3,14 +3,15 @@ import './About.css';
 
 const About = () => {
     const galleryImages = [
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773316227/IMG_3903_n7egvy.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773316223/IMG_2990.JPG_jzr3fy.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773482585/WhatsApp_Image_2026-03-13_at_22.00.32_1_qcbk6g.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773316225/IMG_1135_dduwb9.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773316223/IMG_2771_hn1s7v.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773482584/WhatsApp_Image_2026-03-13_at_22.00.32_myiim0.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773316223/IMG_5481_ptktp5.jpg" },
-        { src: "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773482587/IMG_6757.JPG_nlf2ih.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026804/IMG_2771_prsqma.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026821/IMG_3903_cxthhg.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026802/WhatsApp_Image_2026-03-13_at_22.00.32_2_bsu4ne.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026811/IMG_1135_mpk6cj.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026802/WhatsApp_Image_2026-03-13_at_22.00.32_n5wood.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026812/IMG_5481_gykiyf.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026805/IMG_6757.JPG_fbaleb.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026802/WhatsApp_Image_2026-03-13_at_22.00.32_1_dgsgaj.jpg" },
+        { src: "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026811/IMG_2990.JPG_ggi18y.jpg" }
     ];
 
     // Duplicate for seamless infinite scroll
@@ -30,7 +31,7 @@ const About = () => {
                 <div className="container">
                     <div className="trainer-intro-grid">
                         <div className="glass-card trainer-photo-main" style={{ padding: '1rem' }}>
-                            <img loading="lazy" src="https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773482585/WhatsApp_Image_2026-03-13_at_22.00.32_2_qjkib6.jpg" alt="Coach" />
+                            <img loading="lazy" src="https://res.cloudinary.com/dbvntoevg/image/upload/v1774029062/Preeti_RAWAT_20260320_232012_0000.jpg_e71myp.jpg" alt="Coach" />
                         </div>
                         <div className="trainer-intro-content">
                             <h2>About the Trainer</h2>

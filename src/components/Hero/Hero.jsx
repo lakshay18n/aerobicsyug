@@ -53,10 +53,10 @@ const Hero = () => {
                         <span>Trusted by 100k+ fitness enthusiasts on Instagram</span>
                     </div>
                     <h1 className="headline" style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                        <span style={{ fontFamily: "var(--font-en)", fontWeight: "800", color: "var(--text-dark)", fontSize: "0.75em", lineHeight: "1.2", textTransform: "none", letterSpacing: "normal" }}>
+                        <span className="headline-top" style={{ fontFamily: "var(--font-en)", fontWeight: "800", color: "var(--text-dark)", fontSize: "0.75em", lineHeight: "1.2", textTransform: "none", letterSpacing: "normal" }}>
                             Transform Your Body With Online
                         </span>
-                        <span style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "1.3em", letterSpacing: "3px", background: "linear-gradient(90deg, #0F2460 0%, #1B6CA8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: "1.1" }}>
+                        <span className="headline-bottom" style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "1.3em", letterSpacing: "3px", background: "linear-gradient(90deg, #0F2460 0%, #1B6CA8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: "1.1" }}>
                             Fitness Classes
                         </span>
                     </h1>
@@ -73,7 +73,7 @@ const Hero = () => {
                             <video 
                                 ref={videoRef}
                                 className="video-thumbnail"
-                                src="https://res.cloudinary.com/da7ewmcje/video/upload/v1773836287/aerobics_video_final_rkh6au.mp4"
+                                src="https://res.cloudinary.com/dbvntoevg/video/upload/v1774026891/aerobics_video_final_xksf2e.mp4"
                                 muted={isMuted}
                                 playsInline
                                 preload="metadata"
@@ -109,7 +109,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="trainer-badge glass-card float-anim">
-                        <img src="https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773482590/IMG_6263.JPG_yycovw.jpg" alt="Trainer Profile" />
+                        <img src="https://res.cloudinary.com/dbvntoevg/image/upload/v1774026809/IMG_6263.JPG_gdefhl.jpg" alt="Trainer Profile" />
                         <div className="trainer-info">
                             <strong>Expert Coach</strong>
                             <span>Online Live</span>

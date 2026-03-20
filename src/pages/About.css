@@ -208,7 +208,7 @@
     gap: 1.5rem;
     padding: 0.5rem;
     width: max-content;
-    animation: gallery-scroll 30s linear infinite;
+    animation: gallery-scroll 45s linear infinite;
 }
 
 .gallery-reel-track:hover {
@@ -319,7 +319,7 @@
 
     /* Adjust scroll speed on mobile */
     .gallery-reel-track {
-        animation-duration: 20s;
+        animation-duration: 45s;
         gap: 1rem;
     }
 

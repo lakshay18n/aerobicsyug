@@ -132,7 +132,7 @@ Date & Time: ${dateString} at ${timeString}
                             <h4 style={{ marginBottom: '1rem' }}>Scan QR Code</h4>
                             <div className="qr-placeholder">
                                 {/* <i className="fas fa-qrcode"></i> */}
-                                <img loading="lazy" src="https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773483317/WhatsApp_Image_2026-03-14_at_14.17.17_zr5gx0.jpg" alt="" />
+                                <img loading="lazy" src="https://res.cloudinary.com/dbvntoevg/image/upload/v1774030476/WhatsApp_Image_2026-03-14_at_14.17.17_zr5gx0_cgz32q.jpg" alt="" />
                             </div>
                         </div>
 

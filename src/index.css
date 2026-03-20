@@ -17,10 +17,15 @@
   --gradient-text: linear-gradient(90deg, #0F2460 0%, #1B6CA8 100%);
 
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.4);
+  /* --glass-bg: rgba(255, 255, 255, 0.4);
   --glass-border: 1px solid rgba(255, 255, 255, 0.6);
-  --glass-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
-  --glass-blur: backdrop-filter: blur(16px);
+  --glass-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+  --glass-blur: backdrop-filter: blur(16px); */
+
+  --glass-bg: rgba(255, 255, 255, 0.4);
+--glass-border: 1px solid rgba(255, 255, 255, 0.6);
+--glass-shadow: 0px 0px 15px rgba(15, 36, 96, 0.15);
+--glass-blur: backdrop-filter: blur(16px);
 
   /* Typography */
   --font-en: 'Poppins', sans-serif;

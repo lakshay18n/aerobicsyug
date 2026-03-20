@@ -71,14 +71,13 @@ import './SocialProof.css';
 
 const SocialProof = () => {
     const testimonials = [
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151822/Screenshot_20260310_193018_Chrome.jpg_jts16s.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151823/Screenshot_20260310_193045_Chrome.jpg_jrsuhy.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151821/Screenshot_20260310_193030_Chrome.jpg_kz0mo0.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151823/Screenshot_20260310_193030_Chrome.jpg_1_izwqic.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151821/Screenshot_20260310_192952_Chrome.jpg_ihfyln.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151822/Screenshot_20260310_193018_Chrome.jpg_jts16s.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151823/Screenshot_20260310_193045_Chrome.jpg_jrsuhy.jpg",
-        "https://res.cloudinary.com/da7ewmcje/image/upload/f_auto,q_auto,w_auto/v1773151821/Screenshot_20260310_193030_Chrome.jpg_kz0mo0.jpg"
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026819/Screenshot_20260310_193049_Chrome.jpg_phv8je.jpg",
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026819/Screenshot_20260310_193407_Chrome.jpg_ncr9dl.jpg",
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026815/Screenshot_20260310_193018_Chrome.jpg_omqfya.jpg",
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026815/Screenshot_20260310_193030_Chrome.jpg_jnzqmi.jpg",
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026814/Screenshot_20260310_193002_Chrome.jpg_uxs7if.jpg",
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026814/Screenshot_20260310_192952_Chrome.jpg_zwajuz.jpg",
+        "https://res.cloudinary.com/dbvntoevg/image/upload/v1774026813/Screenshot_20260310_193045_Chrome.jpg_o74oxf.jpg"
     ];
 
     // Duplicate for seamless infinite scroll

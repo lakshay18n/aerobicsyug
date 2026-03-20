@@ -108,7 +108,7 @@
     gap: 1.5rem;
     padding: 0.5rem;
     width: max-content;
-    animation: scroll 30s linear infinite;
+    animation: scroll 45s linear infinite;
 }
 
 /* Pause animation on hover */
@@ -174,7 +174,7 @@
     }
 
     .reel-track {
-        animation-duration: 20s;
+        animation-duration: 45s;
         gap: 1rem;
     }
 }
@@ -186,6 +186,6 @@
 
     .reel-track {
         gap: 0.8rem;
-        animation-duration: 15s;
+        animation-duration: 45s;
     }
 }
