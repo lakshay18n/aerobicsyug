@@ -136,7 +136,7 @@
 
 .reel-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 40px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 10px 40px rgba(15, 36, 96, 0.3);
 }
 
 .testimonial-image {
