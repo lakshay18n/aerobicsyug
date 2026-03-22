@@ -7,6 +7,9 @@ const Payment = () => {
     const [enrollData, setEnrollData] = useState({});
     const [copied, setCopied] = useState(false);
     const [transactionId, setTransactionId] = useState('');
+    const [paymentMethod, setPaymentMethod] = useState('upi');
+    const [isValid, setIsValid] = useState(null);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const UPI_ID = 'preet26.maahii@okhdfcbank';
     const UPI_NAME = 'PREETI RAWAT';
@@ -33,11 +36,50 @@ const Payment = () => {
         });
     };
 
+    const validateTransactionId = (value, method) => {
+        if (!value.trim()) {
+            setIsValid(null);
+            setErrorMessage('');
+            return false;
+        }
+
+        let valid = false;
+        if (method === 'upi') {
+            const upiRegex = /^\d{12,16}$/;
+            valid = upiRegex.test(value);
+        } else if (method === 'bank') {
+            const bankRegex = /^[A-Za-z0-9]{12,22}$/;
+            valid = bankRegex.test(value);
+        }
+
+        setIsValid(valid);
+        if (!valid) {
+            setErrorMessage('Please enter a valid Transaction ID');
+        } else {
+            setErrorMessage('');
+        }
+        return valid;
+    };
+
+    const handleTransactionIdChange = (e) => {
+        const value = e.target.value;
+        setTransactionId(value);
+        validateTransactionId(value, paymentMethod);
+    };
+
+    const handleMethodChange = (e) => {
+        const method = e.target.value;
+        setPaymentMethod(method);
+        setTransactionId('');
+        setIsValid(null);
+        setErrorMessage('');
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!transactionId.trim()) {
-            alert('Please enter your Transaction ID.');
+        if (!validateTransactionId(transactionId, paymentMethod)) {
+            alert('Please enter a valid Transaction ID format.');
             return;
         }
 
@@ -170,19 +212,39 @@ Date & Time: ${dateString} at ${timeString}
                         <p>After completing payment, fill in the details below</p>
 
                         <form className="confirm-form" onSubmit={handleSubmit}>
-                            <div>
-                                <label htmlFor="transactionId">UPI Transaction ID</label>
-                                <input
-                                    type="text"
-                                    id="transactionId"
-                                    value={transactionId}
-                                    onChange={(e) => setTransactionId(e.target.value)}
-                                    placeholder="e.g. 410234567890"
-                                    required
-                                />
+                            <div style={{ marginBottom: '1.2rem' }}>
+                                <label htmlFor="paymentMethod">Payment Method Used</label>
+                                <select 
+                                    id="paymentMethod"
+                                    value={paymentMethod}
+                                    onChange={handleMethodChange}
+                                    className="method-select"
+                                >
+                                    <option value="upi">UPI</option>
+                                    <option value="bank">Bank Transfer / NEFT / IMPS</option>
+                                </select>
                             </div>
 
-                            <button type="submit" className="btn btn-primary w-100 mt-4">
+                            <div>
+                                <label htmlFor="transactionId">
+                                    {paymentMethod === 'upi' ? 'UPI Transaction ID' : 'Bank Transaction ID'}
+                                </label>
+                                <div className="input-with-icon">
+                                    <input
+                                        type="text"
+                                        id="transactionId"
+                                        value={transactionId}
+                                        onChange={handleTransactionIdChange}
+                                        placeholder={paymentMethod === 'upi' ? "e.g. 123456789012345" : "e.g. SBIN0001234567890"}
+                                        className={`tx-input ${isValid === true ? 'valid' : isValid === false ? 'invalid' : ''}`}
+                                        required
+                                    />
+                                    {isValid === true && <i className="fas fa-check-circle valid-icon"></i>}
+                                </div>
+                                {isValid === false && <span className="error-message">{errorMessage}</span>}
+                            </div>
+
+                            <button type="submit" className="btn btn-primary w-100 mt-4" disabled={!isValid}>
                                 <i className="fas fa-check-circle" style={{ marginRight: '0.5rem' }}></i> Submit Payment Confirmation
                             </button>
                         </form>

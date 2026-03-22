@@ -64,7 +64,7 @@ Date & Time: ${dateString} at ${timeString}
                         <p>Don't forget to attach your <strong>payment screenshot</strong> in the WhatsApp chat!</p>
                     </div>
 
-                    <div className="next-steps">
+                    {/* <div className="next-steps">
                         <h4>📋 What Happens Next</h4>
                         <ul>
                             <li><i className="fas fa-check-circle"></i> Our team will verify your payment within 2-4 hours</li>
@@ -72,7 +72,7 @@ Date & Time: ${dateString} at ${timeString}
                             <li><i className="fas fa-check-circle"></i> Class group link will be shared after verification</li>
                             <li><i className="fas fa-check-circle"></i> Start your fitness journey!</li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     <div className="contact-support">
                         💬 Having issues? <a href="https://wa.me/919056114997" target="_blank" rel="noopener noreferrer">Contact us on WhatsApp</a>
