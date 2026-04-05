@@ -70,10 +70,11 @@ const Hero = () => {
                 <div className="hero-visual">
                     <div className="glass-card vsl-card">
                         <div className="video-placeholder" onClick={handleVideoClick} style={{ cursor: 'pointer' }}>
-                            <video 
+                            <video
                                 ref={videoRef}
                                 className="video-thumbnail"
                                 src="https://res.cloudinary.com/dbvntoevg/video/upload/v1774026891/aerobics_video_final_xksf2e.mp4"
+                                poster="https://res.cloudinary.com/dbvntoevg/video/upload/so_2/aerobics_video_final_xksf2e.jpg"
                                 muted={isMuted}
                                 playsInline
                                 preload="metadata"
@@ -85,8 +86,8 @@ const Hero = () => {
                                     <i className="fas fa-play"></i>
                                 </button>
                             )}
-                            <button 
-                                className="mute-btn" 
+                            <button
+                                className="mute-btn"
                                 onClick={toggleMute}
                                 aria-label={isMuted ? "Unmute video" : "Mute video"}
                             >
@@ -96,12 +97,12 @@ const Hero = () => {
                                 <div className="seekbar-track">
                                     <div className="seekbar-fill" style={{ width: `${progress}%` }}></div>
                                 </div>
-                                <input 
-                                    type="range" 
-                                    min="0" 
-                                    max="100" 
-                                    value={progress || 0} 
-                                    onChange={handleSeek} 
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value={progress || 0}
+                                    onChange={handleSeek}
                                     className="video-seekbar"
                                     aria-label="Seek video"
                                 />
